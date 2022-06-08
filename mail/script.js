@@ -5,29 +5,25 @@ stampa un messaggio appropriato sull’esito del controllo.*/
 // lista delle email consentite  
 const allowedEmails = ['marcusgoldman@gmail.com', 'elliotalderson@gmail.com', 'harryquebert@gmail.com',          'alaskayoung@me.com'];
 
-console.log(allowedEmails)
-
 // chiedi email all'utente
 const userEmail = prompt('dimmi la tua email');
-console.log(userEmail)
 
 // controllo se è presente nella lista delle email che possono accedere  
-// scorro l'array (con il ciclo for)
-let emailFound = 'not allowed';
+let emailFound = 'not allowed email';
 
+// scorro l'array
 for (let i = 0; i < allowedEmails.length; i++) {
+
+    // per ogni elemento 
     const email = allowedEmails[i];
 
+    // controllo se userEmail è presente nell'array
     if (email === userEmail) {
-        emailFound = 'allowed';
+        emailFound = 'allowed email';
     }
 }
 
-console.log(emailFound);
-
-// per ogni elemento 
-// controllo se userEmail è presente nell'array (con un if)
-
-// stampo l'esito del controllo
+// stampo in console l'esito del controllo
 // se è presente stampo "allowed email"
 // se non è presente stampo "not allowed email"
+console.log(emailFound);
